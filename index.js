@@ -12,5 +12,5 @@ function createEmployeeRecord([firstName, familyName, title, payPerHour] ){
 
 function createEmployeeRecords(array){
   console.log(array)
-  return array.map(createEmployeeRecords)
+  return array.map((el)=> createEmployeeRecords(el))
 }
