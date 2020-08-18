@@ -10,6 +10,6 @@ function createEmployeeRecord([firstName, familyName, title, payPerHour] ){
   }
 }
 
-function createEmployeeRecords(arr){
+function createEmployeeRecords(arr=[]){
   return arr.map(createEmployeeRecords)
 }
