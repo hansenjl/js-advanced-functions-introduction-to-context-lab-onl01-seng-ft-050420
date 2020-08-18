@@ -13,3 +13,10 @@ function createEmployeeRecord([firstName, familyName, title, payPerHour] ){
 function createEmployeeRecords(arr){
   return arr.map(createEmployeeRecord)
 }
+
+function createTimeInEvent(guy,dateStamp){
+  let hour = dateStamp.split(" ")[1]
+  let date = dateStamp.split(" ")[0]
+  return {...guy, 
+  timeInEvents: [...timeInEvents, {type: "TimeIn", hour: hour, date: date}]}
+}
