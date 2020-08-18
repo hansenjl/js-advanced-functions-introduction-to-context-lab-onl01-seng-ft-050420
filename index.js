@@ -15,7 +15,7 @@ function createEmployeeRecords(arr){
 }
 
 function createTimeInEvent(guy,dateStamp){
-  let hour = dateStamp.split(" ")[1].split('')
+  let hour = dateStamp.split(" ")[1].split('').slice(2).join("")
   let date = dateStamp.split(" ")[0]
   return {...guy, 
   timeInEvents: [...timeInEvents, {type: "TimeIn", hour: hour, date: date}]}
